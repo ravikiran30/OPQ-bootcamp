@@ -1,0 +1,51 @@
+Objects:-----------
+the values are written as name:value pairs (name and value separated by a colon).
+
+defination-------
+
+const car = {type:"Fiat", model:"500", color:"white"};
+const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
+access the object------
+
+person.lastName;
+
+
+LOOPS----------------
+
+for loop---
+for (expression 1; expression 2; expression 3) {
+  // code block to be executed
+}
+Expression 1 is executed (one time) before the execution of the code block.
+
+Expression 2 defines the condition for executing the code block.
+
+Expression 3 is executed (every time) after the code block has been executed.
+ex------
+var i = 5;
+
+for (var i = 0; i < 10; i++) {
+  // some code
+}
+
+// Here i is 10
+************************************************
+
+wWHILE loop---------
+while (condition) {
+  // code block to be executed
+}
+
+while (i < 10) {
+  text += "The number is " + i;
+  i++;
+}
+
+***********************

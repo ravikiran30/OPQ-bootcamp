@@ -1,0 +1,39 @@
+Bascis of JavaScript ------19/02/2024
+
+WHAT IS PROGRAMMING?
+ Programming is giving a set of instructions to a computer to execute.
+ 
+ 
+ WHAT IS SOFTWARE?
+ Software is a collection of instructions, data, or computer programs that are used to run machines and carry out particular activities. It is the antithesis of hardware, which refers to a computer’s external components.
+ 
+ 
+ WHAT IS BINARY CODE?
+ A binary code represents text, computer processor instructions, or any other data using a two-symbol system. The two-symbol system used is often "0" and "1" from the binary number system. The binary code assigns a pattern of binary digits, also known as bits, to each character, instruction, etc.
+ 
+javascrpit syntax---
+ // How to create variables:
+var x;
+let y;
+
+// How to use variables:
+x = 5;
+y = 6;
+let z = x + y;
+
+
+JavaScript Variables
+In a programming language, variables are used to store data values.
+
+JavaScript uses the keywords var, let and const to declare variables.
+
+An equal sign is used to assign values to variables.
+
+let x;
+x = 6;
+
+To print output-
+let x;
+x = 6;
+console.log(x)
+

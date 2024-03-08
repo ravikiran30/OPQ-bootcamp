@@ -1,0 +1,66 @@
+Strings -----23/02/2024
+
+
+Strings are for storing text
+Strings are written with quotes
+
+let text = "John Doe";
+
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let length = text.length;
+
+
+let text = "We are the so-called \"Vikings\" from the north.";
+let text= 'It\'s alright.';
+
+chartAt()
+let text = "HELLO WORLD";
+let char = text.charAt(0);
+
+JavaScript String slice()
+slice() extracts a part of a string and returns the extracted part in a new string.
+let text = "Apple, Banana, Kiwi";
+let part = text.slice(7, 13);
+
+
+toUpperCase()
+let text1 = "Hello World!";
+let text2 = text1.toUpperCase();
+
+
+tolowercase()
+let text1 = "Hello World!";     
+let text2 = text1.toLowerCase();
+
+replace()
+let text = "Please visit Microsoft!";
+let newText = text.replace("Microsoft", "OPQ");
+
+****************************************************************
+
+Search program
+
+let name="opqTech"
+let sub="oTeCoh"
+
+function search(name,sub){
+    
+    for (let i=0;i<sub.length;i++){
+        for (let j =i; j<name.length; j++){
+            if(sub[i]==name[j]){
+                
+                console.log(name[j])
+                
+            }
+            
+            
+            
+        }
+        
+    }
+    
+    
+}
+console.log(search(name,sub))
+
+*************************************

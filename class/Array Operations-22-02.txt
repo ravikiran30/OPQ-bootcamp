@@ -1,0 +1,81 @@
+Array Operations-----22/02/2024
+
+Syntax:
+const array_name = [item1, item2, ...];   
+const cars = ["Saab", "Volvo", "BMW"];
+or
+const cars = [];
+cars[0]= "Saab";
+cars[1]= "Volvo";
+cars[2]= "BMW";
+
+Accesing array:
+const cars = ["Saab", "Volvo", "BMW"];
+let car = cars[0];
+
+To find array Length:
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let length = fruits.length;
+
+adding array element:
+const fruits = ["Banana", "Orange", "Apple"];
+fruits.push("Lemon");
+
+to display array:
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();
+
+merging two arrays:
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+
+const myChildren = myGirls.concat(myBoys);
+
+
+array indexof()
+The indexOf() method searches an array for an element value and returns its position.
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits.indexOf("Apple") + 1;
+
+
+array includes()
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits.includes("Mango")
+
+*****array.includes(search-item)****
+
+**************************************************************************************
+\
+Second largest number in an array
+
+let num2=[10,20,12,35,45,68,80]
+ 
+function secondLargest(arr){
+    let firstmax=arr[0]
+    let secondmax=arr[0]
+    for(let i=1;i<arr.length;i++)
+    {
+        if(firstmax<arr[i]){
+            secondmax=firstmax
+            firstmax=arr[i]
+        }
+    else if(arr[i]>secondmax)
+    {
+        secondmax=arr[i]
+    }
+    }
+    return secondmax
+ 
+}
+console.log(secondLargest(num2))
+*****************************************************************************
+
+
+
+
+
+
+
+
+
