@@ -1,0 +1,21 @@
+Find Time Complexity?
+**************
+
+let a = 0, i = N;
+
+while (i > 0) {
+    a += i;
+    i /= 2;
+}
+
+***************
+
+
+i=N   1st iterate
+i=n/2  2nd iterate
+i=n/4  3rd iterate
+''''' so on 
+until i becomes less than or equal to 0.
+
+
+The time complexity is  O(log N)
