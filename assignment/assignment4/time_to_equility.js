@@ -1,31 +1,28 @@
-/*Given an array of integers A, find and return the product array of the same size where the ith element of the product array will be equal to the product of all the elements divided by the ith element of the array.
+/*Given an integer array A of size N. In one second, you can increase the value of one element by 1.
 
-Note: It is always possible to form the product array with integer (32 bit) values. Solve it without using the division operator.
+Find the minimum time in seconds to make all elements of the array equal.
+
+
+Problem Constraints
+1 <= N <= 1000000
+1 <= A[i] <= 1000
 
 
 Input Format
+First argument is an integer array A.
 
-The only argument given is the integer array A.
+
 Output Format
+Return an integer denoting the minimum time to make all elements equal.
 
-Return the product array.
-Constraints
 
-2 <= length of the array <= 1000
-1 <= A[i] <= 10
-For Example
+Example Input
+A = [2, 4, 1, 3, 2]
 
-Input 1:
-    A = [1, 2, 3, 4, 5]
-Output 1:
-    [120, 60, 40, 30, 24]
 
-Input 2:
-    A = [5, 1, 10, 1]
-Output 2:
-    [10, 50, 5, 50]
-
-    */
+Example Output
+8
+*/
 
     
 function time_to_equility(A){
