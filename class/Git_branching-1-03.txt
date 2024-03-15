@@ -1,0 +1,14 @@
+* Git Branching Statements:
+  This strategy helps maintain a stable production environment while allowing for ongoing development and the introduction of new features. Adjustments can be made based on the specific needs and scale of a project.
+  Git branching strategies are approaches to organizing and managing branches in a collaborative development environment. Here's an overview of a common branching strategy known as Git Flow:
+1) Master Branch:
+  Represents the production-ready code.Directly reflects the code running in production.
+
+2)Develop Branch:
+  Serves as the integration branch for ongoing work.Feature branches are merged into the "develop" branch.
+
+3)Feature Branches:Created for new features or non-trivial changes.Branched off from "develop."Merged back into "develop" when the feature is complete.
+
+4)Release Branches:Created when preparing for a new release.Branched off from "develop."Bug fixes and release-related adjustments are made here.Merged into "master" and "develop" after release.
+
+5)Hotfix Branches:Created to fix critical issues in the production code.Branched off from "master."Merged into both "master" and "develop." 

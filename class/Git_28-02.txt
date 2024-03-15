@@ -1,0 +1,15 @@
+*Branching in git:
+
+1. git branch "branchname":used to create branch.
+
+2. git checkout "branchname":used to switch to needed branch.
+
+3. git checkout -b "branchname":used to create and switch the branch.
+
+4. git branch:used to list the branches.
+
+5. git merge:used for adding all the commits and files to main branch.
+
+6. git stash:used to save the changes temporarily.
+
+7. git stash pop:used to get back the temporary saved changes (throws the changes)

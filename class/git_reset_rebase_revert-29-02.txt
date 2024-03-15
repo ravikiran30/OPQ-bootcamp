@@ -1,0 +1,27 @@
+* Git Reset:
+  Is the command we use when we want to move the repository back to a previous commit, discarding any changes made after that commit.
+  There are three types of git reset:
+1)Soft reset: 'git reset --soft'
+  This preserves changes in your working directory and staging area,allowing you to recommit them.
+  (will move the commit file to staging area to commit it).
+
+2)Mixed reset:'git reset --mixed'
+  Resets the staging area, but preserves changes in your working directory. You need to add and commit again after this type of reset.
+  (will move the commit file to working directory,we need to add and commit to working directory).
+
+3)Hard reset:'git hard --hard'
+  Resets both the staging area and the working directory, discarding changes.
+  (will delete the last commit,we need to create file,add it,then commit it).
+
+* Git Revert:
+  The "git revert" command is used to create a new commit that undoes the changes made in a previous commit.
+->Revert the changes.
+->Undo the changes.
+->We can get the deleted files again using the commit Id.
+   git revert "commit Id"
+
+* git cherry pick "commit Id":To get specific file.
+
+* git Rebase:
+  The "git rebase" command is used to combine or modify a sequence of commits to create a linear history. It essentially allows you to move, combine, or delete commits.
+   git rebase <rebase> (here, rebase is branch or commit where rebas should start).

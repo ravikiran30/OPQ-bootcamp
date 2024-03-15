@@ -1,0 +1,104 @@
+Subarray problem---13/03
+
+
+1--To print subarrays:---
+
+
+let array=[7,6,9,5,1]
+let subarray=[]
+let N=array.length
+for (let i=0;i<N;i++){
+	for (let j=i;j<N;j++){
+		for (let k=i;k<=j;k++){
+			subarray.push(array[k])
+			}
+		console.log(subarray)
+		subarray=[]
+	}
+}
+
+
+2--Given an array print sum of all the subarray
+
+function subarraysum(array,N){
+	let result=0
+	let temp=0
+	for(let i=0;i<N;i++){
+		temp=0
+		for(let j=i;j<N;j++){
+			temp+=array[j]
+			result+=temp
+		}
+	}
+	return result
+}
+
+let arr=[1,2,3,4,5]
+let len=arr.length
+subarraysum(arr,len)
+
+
+3-- Find maximum sub array sum
+
+let arr=[4,-1,3,-3]
+let cumarr=[]
+cumarr.push(arr[0])
+let max=cumarr[0]
+for (let i=1;i<arr.length;i++){
+    cumarr.push(cumarr[i-1]+arr[i])
+}
+let N=cumarr.length
+for (let L=0;L<N;L++){
+    for(let R=L;R<N;R++){
+        sum=0
+        if(L==0){
+            sum=cumarr[R]
+        }
+        else{
+            sum=cumarr[R]-cumarr[L-1]
+        }
+        if(sum>max){
+            max=sum
+        }
+    }
+}
+console.log(max)
+console.log(cumarr)
+
+
+4--given array find the length of smallest sub-array which contain both max and min array
+
+let arr=[1,2,3,1,3,4,6,4,6,3]
+
+let N=arr.length
+let cal_len
+let min_len=N
+let min=arr[0]
+let max=arr[0]
+for (let i=1;i<arr.length;i++){
+    if(min>arr[i])
+          min=arr[i]
+    if(max<arr[i])
+        max=arr[i]
+}
+for (let L=0;L<N;L++){
+    if(arr[L]==min)
+        for(let R=L+1;R<N;R++){
+            if(arr[R]==max)
+                    cal_len=R-L+1
+                if(min_len>cal_len)
+                    min_len=cal_len
+        }
+}
+for (let L=0;L<N;L++){
+    if(arr[L]==max)
+        for(let R=L+1;R<N;R++){
+            if(arr[R]==min)
+                    cal_len=R-L+1
+                if(min_len>cal_len)
+                    min_len=cal_len
+        }
+}
+console.log(min)
+console.log(max)
+console.log(min_len)

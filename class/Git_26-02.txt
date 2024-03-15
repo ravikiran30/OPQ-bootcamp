@@ -1,0 +1,51 @@
+git ------------26/02/2024
+
+
+Git is a version control system.
+
+Git helps you keep track of code changes.
+
+Git is used to collaborate on code.
+
+
+Commands------------
+
+git --version
+
+
+git does-----------
+Manage projects with Repositories
+Clone a project to work on a local copy
+Control and track changes with Staging and Committing
+Branch and Merge to allow for work on different parts and versions of a project
+Pull the latest version of the project to a local copy
+Push local updates to the main project
+
+
+Commands-----------
+mkdir [folder_name]---------to make new directory
+cd [file_name]----------------to change the current working directory
+git init------------to initialize git repository
+ls--------to list the files in the directory
+git status----Git is aware of the file, but has not added it to our repository!
+Tracked - files that Git knows about and are added to the repository
+Untracked - files that are in your working directory, but not added to the repository
+
+
+
+Git Architecture-----------
+
+				repository
+git commit file.txt
+		^
+		|		staging area
+git add file.txt
+		^		
+		|	working(local area)
+
+
+Three-tree architecture in Git: The working directory (containing changes that may not be tracked by Git), the staging index (containing changes that are about to be committed into the repository), and the repository (being tracked by Git). 
+When we finish working with our files in the project, commit them to the staging stage and then push them to the repository.
+
+
+
