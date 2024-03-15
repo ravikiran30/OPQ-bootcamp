@@ -14,7 +14,8 @@ let a=1;
 let b="ravi";
 let c=true;
 let d={ college : 'BMSIT',
-        year: 2023};
+        year: 2023,
+        years:[1,2,3,4]};
 
 
 console.log(typeof a);

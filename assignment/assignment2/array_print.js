@@ -2,16 +2,21 @@
 
 
 
-let arr=[2,3,4,5,6,7];
-/*
+let array=[2,3,4,5,6,7];
 
-for (let i=0; i<arr.length;i++){
-    console.log(arr[i]);
+function using_for(array){
+    for (let i=0; i<array.length;i++){
+        console.log(array[i]);
+    }
 }
 
-*/
-let i=0;
-while( i<arr.length){
-    console.log(arr[i])
-    i++
+function using_while(array){
+    let i=0;
+    while( i<array.length){
+        console.log(array[i])
+        i++
+    }
 }
+
+using_for(array)
+using_while(array)
