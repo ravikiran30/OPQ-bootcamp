@@ -1,0 +1,46 @@
+Question:
+Count number of set bits in a number
+N---21-------10101----set bit is 3
+
+let N=21
+let cnt=0
+while(N!=0){
+	if(N&1==1){
+		cnt++
+	}
+N=N>>1
+}
+console.log(cnt)
+
+
+
+Question:
+Given a number N set iTH bit of N
+eg: N=21     i=4
+21-----10101
+0utput=29----11101
+
+
+let N=21
+let i=4
+let mask=1<<(i-1)
+console.log(N|mask)
+
+
+
+HASHING::----
+it stores the data in the form of key,value pairs.it simplifies the search operation.
+
+arr=[2,2,1,5,6,7,6,2]
+
+table:
+
+num			count of occurence
+key			value
+2			3
+1			1
+5			1
+6			2
+7			1
+
+value>1 are duplicates.

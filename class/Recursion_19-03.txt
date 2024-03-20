@@ -1,0 +1,10 @@
+Recursion:---
+	If you have a senario where you can express the bigger problem in terms of smaller same problem then it is called recursion.
+
+how to write recursive code:----
+1] Assumption:- Coming up with the function and assume that it works.
+2] main logic:- Slove the assumption with sub-problem.
+3] Basecase:- when should your code stop.
+
+
+
