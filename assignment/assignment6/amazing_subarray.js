@@ -6,7 +6,7 @@ for(var i=0;i<string1.length;i++){
         arr.push(string1.substring(i, j))
     }
 }
-
+console.log(arr)
 let count=0
 for(var k=0;k<arr.length;k++){
     if(arr[k].startsWith("a"))

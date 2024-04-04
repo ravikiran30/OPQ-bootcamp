@@ -1,0 +1,46 @@
+OOPs====Object Oriented Programming
+	It talks about organizing code.
+	especially how to create complex variables and
+	define function which  acts on them.
+
+1-Class--It is a blueprint to organize the input data.
+	-->It helps us to represent real world related data as one entity.
+	-->Constructor->
+
+Syntax==
+
+class Student{
+	Constructor(name,age,id){
+		this.name=name
+		this.age=age
+		this.id=id
+	}
+	getName(){
+		return this.name
+	}
+	getAge(){
+		return this.age
+	}
+	getID(){
+		return this.id
+	}
+};
+
+let student1=new Student("ravi", 20, 15)
+let student2=new Student("kiran" ,22,10)
+console.log(student1.getName())
+console.log(student2.getAge())
+
+
+IN THE ABOVE CODE:
+--Class=Student
+--Student property=   name
+				age
+				id
+--Class methods=		getName
+				getAge
+--student1 & student2 are the instance of the class named Student.
+
+  
+DataEncapsulation--binding class 
+
