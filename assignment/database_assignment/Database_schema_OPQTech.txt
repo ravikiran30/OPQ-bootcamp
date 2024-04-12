@@ -1,0 +1,21 @@
+Database for a OPQTECH company
+
+Design schema satisfying the following requirements mentioned below.
+
+System requirements:
+
+1. Students can register for different batches (Ex: Feb’20)
+
+2. Students attend daily lectures on various topics (like, Trees, Linked lists, stacks etc.)
+
+3. Every lecture has an assignment and homework.
+
+4. Every assignment and homework can have 0-10 problems.
+
+5. Every class has an instructor, some prelecture content and lecture notes.
+
+6. Students should be able to see the class timeline, problem solve percentage, attendance percentage and status of all the problems in all the assignments/homework in the dashboard.
+
+7. Instructors should be able to see a list of classes taken by him and his upcoming class.
+
+8. Instructors should be able to create lessons for all the batches and should be able to add and modify the assignments and homework problems.
