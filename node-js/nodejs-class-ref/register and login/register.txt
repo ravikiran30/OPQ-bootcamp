@@ -1,0 +1,12 @@
+{
+    "email":"opq@bootcamp.com",
+    "first_name":"OPQ",
+    "last_name":"Bootcamp",
+    "phone_number":"9999999999",
+    "password":"Opq@123"
+}
+
+
+register = "INSERT INTO users SET email=?, password=?, first_name=?, last_name=?, phone_number=?"
+
+[user_details.email, user_details.password, user_details.first_name, user_details.last_name, user_details.phone_number]

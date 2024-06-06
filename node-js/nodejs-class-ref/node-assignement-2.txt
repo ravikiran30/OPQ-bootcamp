@@ -1,0 +1,6 @@
+1. Implement modules for calculator application using four different methods of export
+2. Download third party module from npmjs.com and use it in your application
+3. Create a package.json using npm init 
+4. Create a NodeJS project, create .env file and start a server using express
+5. Send the response to client using different methods of responding like res.json and res.send.
+6. Create GET and POST APIs using Router module in Express

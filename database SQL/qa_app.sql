@@ -313,7 +313,7 @@ having sum(total_price)> (select avg(total_price) from medicine_booked);
 
 
 -- INSERT 
-insert into;
+
 select p.patient_id,d.doctor_id,a.appointment_id,a.appointment_date
 from patient p
 join appointment a on a.patient_id=p.patient_id
@@ -336,16 +336,9 @@ where medicine_id in (select medicine_id
 select * from appointment;
 
 delete from patient p
-where p.patient_id in  (select patient_id from patient p
+where p.patient_id in   (select patient_id from patient p
 					where not exists (select 1 from appointment a
-										where a.patient_id=p.patient_id);
-
-
-
-
-
-
-
+										where a.patient_id=p.patient_id));
 
 
 

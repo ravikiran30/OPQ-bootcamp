@@ -1,0 +1,4 @@
+1. Write NodeJs code to perform hash operation using Crypto module using sync and async operation. Calculate the time to perform hash operation using Sync and Async operations
+2. Write NodeJs code to perform read operation on file using FS module using sync and async operation. Calculate the time to perform hash operation using Sync and Async operations
+
+Goal: To understand the thread pool size and advantage of asynchronous code

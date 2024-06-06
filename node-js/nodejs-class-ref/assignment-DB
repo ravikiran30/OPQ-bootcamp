@@ -1,0 +1,4 @@
+1. Connect to DB using mysql createpool
+2. Create an API to query all info from table
+3. Create an API to query particular info from table
+4. Implement Error Handling module
