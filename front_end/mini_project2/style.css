@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.toolbox-cont{
+    height: 5rem;
+    background-color: lightslategray;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top:20px
+
+}
+.toolbox-cont > *{
+    margin-left: 3.5rem;
+}
+.task-state{
+    height: 1.5rem;
+    width: 3rem;
+
+}
+.toolbox-task-cont{
+    background-color: darkslategray;
+    display: flex;
+    height: 3.5rem;
+    width: 18rem;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.action-btn-cont{
+    display: flex;
+    height: 3.5rem;
+    width: 8rem;
+    color: white;
+    background-color: darkslategray;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: space-around;
+}
+.toolbox-cont > * :hover{
+    background-color: lightgray;
+
+}
+.add-btn :hover{
+    background-color: green;
+}
+.remove-btn :hover{
+    background-color: red;
+}
+.lightpink{
+    background-color: lightpink;
+}
+.lightgreen{
+    background-color: lightgreen;
+}
+.lightblue{
+    background-color: lightblue;
+}
+.black{
+    background-color: black;
+}
+
+.task-creator{
+    height: 50vh;
+    width: 40vw;
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    position: absolute;
+
+    top: 10rem;
+    left: 20rem;
+    
+}
+
+.text-cont{
+    width: 80%;
+    border:none;
+    overflow: none;
+    background-color: lightcyan;
+    font-size: 2rem;
+    color: black;
+}
+.task-state-list{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.task-state-list .task-state{
+    height: 3rem;
+    width: 5rem;
+}
+.active{
+    border :0.25em solid;
+}
+.create-ticket{
+    height: 3rem;
+    width: 5rem;
+    font-weight: bold;
+    
+}
+.ticket-cont{
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.ticket{
+    height: 12rem;
+    width: 15rem;
+    background-color: coral;
+    position: relative;
+}
+.ticket-color{
+    height: 10%;
+
+}
+.ticket-id{
+    height: 20%;
+    background-color: yellow;
+}
+.ticket-desc{
+    height: 70%;
+    font-size: 2rem;
+    color: black;
+    background-color: antiquewhite;
+}
+.ticket-lock{
+    position: absolute;
+    bottom: 0.2rem;
+    right: 0.2rem;
+}

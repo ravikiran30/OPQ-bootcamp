@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <p id="number">0</p>
+        <div>
+            Increment / Decrement by value <input type="num" min="1" max="10" value="1" id="incr_decr">
+        </div>
+        <div>
+            <button id="add">+</button>
+            <button id="sub">-</button>
+        </div>
+        <button id="reset">Reset</button>
+    </div>
+</body>
+<script>
+    
+    const numberElement = document.getElementById('number');
+    const incrDecrInput = document.getElementById('incr_decr');
+    const addButton = document.getElementById('add');
+    const subButton = document.getElementById('sub');
+    const resetButton = document.getElementById('reset');
+
+
+    addButton.addEventListener('click',function(e){
+        let total=parseInt(numberElement.innerText)+parseInt(incrDecrInput.value)
+        numberElement.innerText=total
+    })
+    subButton.addEventListener('click',function(e){
+        let total=parseInt(numberElement.innerText)-parseInt(incrDecrInput.value)
+        if(total<0){
+            total=0
+        }
+            numberElement.innerText=total
+
+    })
+
+    resetButton.addEventListener('click',function(e){
+        numberElement.innerText=0
+
+    })
+
+
+
+</script>
+</html>

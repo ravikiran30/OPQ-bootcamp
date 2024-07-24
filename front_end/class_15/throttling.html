@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throttling</title>
+</head>
+<body>
+    <input type="text">
+    
+</body>
+<script>
+    let count=0
+    function networkcall(){
+        console.log("Network Request - >",count)
+        count++
+    }
+
+    function throttle(work,delay){
+        let flag=true
+        function innerfunction(){
+            if(flag){
+                work()
+                flag=false
+                setTimeout(function(){
+                    flag=true
+                    },delay)
+                }
+            
+
+        }
+        return innerfunction
+    }
+    let inputField=document.querySelector('input')
+    let mufunc=throttle(networkcall,2000)
+    inputField.addEventListener('keydown'.myfunc)
+</script>
+</html>

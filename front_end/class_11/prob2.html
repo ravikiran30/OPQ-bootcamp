@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ul>
+    </body>
+
+
+    <script>
+        let myele = document.createElement("li")
+        myele.innerText= "7"
+
+        let un_ordered_list = document.querySelector("ul")
+        console.log(un_ordered_list.children)
+        un_ordered_list.insertBefore(myele, un_ordered_list.children[6])
+
+
+    </script>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="removeall">Remove All</button>
+   
+    <ul id="alltask">
+        <li class="remove" id="task-1">
+            <p>Task-1</p>
+            <button>delete</button>
+        </li>
+        <li class="remove" id="task-2">
+            <p>Task-2</p>
+            <button>delete</button>
+        </li>
+        <li class="remove" id="task-3">
+            <p>Task-3</p>
+            <button>delete</button>
+        </li>
+        <li class="remove" id="task-4">
+            <p>Task-4</p>
+            <button>delete</button>
+        </li>
+        <li class="remove" id="task-5">
+            <p>Task-5</p>
+            <button>delete</button>
+        </li>
+    </ul>
+    
+</body>
+<script>
+
+    
+    let delbutton=document.getElementsByTagName("button")
+    for(let i=0;i<delbutton.length;i++){
+        delbutton[i].addEventListener("click",function(e){
+            
+            const task= e.target.parentNode.id;
+            const deltask=document.getElementById(task)
+            deltask.remove()
+        })
+
+    }
+    
+    let delall=document.getElementById('removeall')
+    let dellist=document.getElementById("alltask")
+    
+        delall.addEventListener("click",function(){
+            while(dellist.firstChild){
+                dellist.removeChild(dellist.firstChild)
+            }      
+    })
+    
+    
+</script>
+</html>

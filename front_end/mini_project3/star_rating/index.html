@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating</title>
+    <style>
+        .star{
+            font-size: 40px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Star Rating</h1>
+        <div class="star-container">
+            <span class="star" data-pos="1">&#9733</span>
+            <span class="star" data-pos="2">&#9733</span>
+            <span class="star" data-pos="3">&#9733</span>
+            <span class="star" data-pos="4">&#9733</span>
+            <span class="star" data-pos="5">&#9733</span>
+        </div>
+        <h2>Rating Count -><span id="count">0</span></h2>
+    </div>
+    
+</body>
+<script>
+    let starlist =document.querySelectorAll(".star")
+    let count = document.getElementById("count")
+    let rating = 0
+    
+    for(let i=0;i<=5;i++){
+        starlist[i].addEventListener("click",function(e){
+            let pos = e.target.getAttribute("data-pos")
+            rating = pos
+            for(let j=0;j<5;j++){
+                if(j<pos){
+                    starlist[j].style.color = "gold"
+                    }else{
+                        starlist[j].style.color = "black"
+                }
+            }
+
+
+
+            count.textContent = rating
+        })
+
+
+
+    }
+
+
+</script>
+</html>

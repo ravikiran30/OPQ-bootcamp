@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+</head>
+<style>
+    
+    .box1{
+        background-color: lightblue;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .box2{
+        background-color: lightcoral;
+        padding: 10px;
+        font-size: 20px;
+    
+    }
+
+    @media screen and (min-width:750px){
+        .box1{
+            background-color: red;
+            color: aliceblue;
+            
+        }
+
+    }
+    @media screen and (orientation: landscape){
+        .box2{
+            background-color: green;
+            color: aliceblue;
+
+        }
+    }
+</style>
+
+<body>
+    <div class="conatiner">
+        <div class="box1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil accusantium ex quas dignissimos debitis
+                assumenda molestias est, quae sit aliquid voluptatem facilis. Totam ad molestias veritatis ex vel cumque
+                iste?</p>
+        </div>
+        <div class="box2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nemo dolores molestias eum accusantium
+                hic inventore, sapiente officia vitae quia nobis assumenda delectus non esse voluptates voluptatibus,
+                laborum consectetur sint.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- Media Queries are used to provide different styles for the different devices by their features like 
+width , height , orientation etc.
+ for responsive website.
+ min-width
+ max-height
+ min-height
+ max-height
+
+ orientation: landscape
+ orientation:portrait
+
+
+ -->

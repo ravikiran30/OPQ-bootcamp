@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="id-1"> Say Hello</button>
+        <p>Hello World</p>
+    </body>
+    <script>
+        console.log("Hello World")
+        consoel.log(document)
+        let button = document.getElementById("id-1")
+
+        button.addEventListener("click", 
+        function(){
+            let body = document.querySelector("body")
+            let para = document.createElement("p")
+            para.innerText = "HEllo WOrld"
+            body.append(para)
+        })
+        console.log("HEllo world 2")
+
+        
+    </script>
+
+
+</html>

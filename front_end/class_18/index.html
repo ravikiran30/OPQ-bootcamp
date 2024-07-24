@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click Me!</button>
+    
+</body>
+<script>
+/*
+    //call back hell............
+    let btn = document.querySelector('button')
+    function getMyData(url,callback){
+        setTimeout(() =>{
+            let data ='I am op from network call'
+            callback(null,data)
+        },2000)
+        callback()
+    }
+    btn.addEventListener('click', function() {
+        getMyData('https://payment',(err,data) => {
+            if(err){
+                console.log("error occured in fecthing data")
+            }else{
+                getMyData("https://generating_bill",(err,data) => {
+                    if(err){
+                        console.log("error occ")
+                    }else{
+                        console.log(data)
+                    }
+                })
+            }
+        })
+    })   */
+
+    //promise
+ /*   score = 80
+    const myPromise = new Promise((resolve,reject) => {
+       let condition =score > 90 
+       if(condition){
+        resolve('you are passed')
+       }else{
+        
+        reject('you are failed')
+        
+       }
+
+    })
+    myPromise.then(result  => {
+        console.log("I will go for ride")
+
+    }).catch(error => {
+        console.log("I will go for study")
+    }).finally(() =>{
+        console.log("I will go for sleep")
+    }) */
+
+
+    function getmydata(url){
+        let mypromise = new Promise((reslove,reject)=>{
+
+       
+        setTimeout(()=>{
+            let data = "HI"
+            if(data){
+                reslove(data)
+            }else{
+                reject('data is not there')
+            }
+        },2000)
+    })
+    return mypromise
+
+    }
+    getmydata('https://jsonplaceholder.typicode.com/todos/1').then(result => {
+        console.log("This is the first result")
+        console.log(result)
+        let mysecond =getmydata("https://generating_bills")
+        .then(result =>{
+            console.log("This is the second result")
+            let mythird = getmydata("https://ackowledge")
+            .then(result =>{
+                
+                console.log("This is the third result")
+            })
+            .catch(err =>{
+                console.log("This is the third error")
+            })
+        })
+    })
+</script>
+</html>

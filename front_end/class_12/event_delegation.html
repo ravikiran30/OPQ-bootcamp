@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event delegation</title>
+</head>
+<body>
+    <div class="categories">
+        <li class="headphones">headphones</li>
+        <li class="speakers">speakers</li>
+        <li class="mobile">mobile</li>
+        <li class="tabs">tabs</li>
+    </div>
+    <div class="state">
+
+    </div>
+</body>
+<script>
+    let categories = document.querySelector('.categories');
+    
+
+    categories.addEventListener('click',function(e){
+        console.log("I am in category")
+        console.log(e.target.classList)
+        if(e.target.classList[0] === 'mobile'){
+            console.log("i am mobile")
+        }
+        if(e.target.classList[0] === 'speakers'){
+            console.log("i am speakers")
+        }
+        if(e.target.classList[0] === 'headphones'){
+            console.log("i am headphones")
+        }
+        if(e.target.classList[0] === 'tabs'){
+            console.log("i am tabs")
+        }
+
+        
+    })
+
+
+</script>
+</html>

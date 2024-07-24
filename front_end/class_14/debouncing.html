@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>debouncing</title>
+</head>
+<body>
+    <input type="text">
+
+    
+</body>
+<script>
+    let count=0
+    function networkcall(){
+        console.log("Network call made   ",count);
+        count++
+    }
+    function observedelay(work,sec){
+        let timeId
+        function innerfunction(){
+            clearTimeout(timeId)
+            timeId=setTimeout(work,sec)
+            
+        }
+        return innerfunction
+    }
+    let inputField = document.querySelector('input')
+    let myfunc = observedelay(networkcall,3000)
+    inputField.addEventListener('keydown',myfunc)
+</script>
+</html>

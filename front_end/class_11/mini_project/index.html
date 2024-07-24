@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin:0 ;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            display: flex;
+            
+            align-items: center;
+            
+            justify-content: center;
+            background-color: red;
+            height:70vh;
+        }
+        .chlid{
+            background-color: gery;
+            height: 30vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="weather">
+            <div class="temp">20</div>
+            <div class="location">
+                <p>location</p>
+                <span>Time and Date</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="child">
+        <div>
+            <input type="text" class="seachfield">
+            <button class="submit">search</button>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    let searchbtn = document.querySelector(".submit")
+    let searchField = document.querySelector(".searchField")
+    let tempField = document.querySelector(".weather .temp")
+    let locationField = document.querySelector(".weather .location p")
+    let timeField = document.querySelector(" .weather .location .span")
+
+    async function getweatherinfo(url){
+        const response = await fetch(url);
+        const info = await response.json()
+        console.log(info)
+        console.log(info.current.temp_c)
+        console.log(info.location.name)
+        console.log(info.location.localtime)
+    }
+    searchbtn.addEventListener('click',function(e){
+        let searchValue = searchField.value
+        console.log(searchValue)
+    })
+</script>
+</html>

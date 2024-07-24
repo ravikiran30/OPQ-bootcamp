@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <script src="script.js" ></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+    <!-- go to google and type fontawesome cnd and cpoy 1st link  to use font symbols-->
+</head>
+<body>
+    <nav class="toolbox-cont">
+        <div class="toolbox-task-cont">
+            <div class="lightpink task-state"></div>
+            <div class="lightgreen task-state"></div>
+            <div class="lightblue task-state"></div>
+            <div class="black task-state"></div>
+        </div>
+
+
+        <div class="action-btn-cont">
+            <div class="add-btn">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="remove-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="task-creator">
+        <textarea class="text-cont" placeholder="Enter your text"></textarea>
+        
+        <div class="task-state-list">
+            <div class="lightpink task-state"></div>
+            <div class="lightgreen task-state"></div>
+            <div class="lightblue task-state"></div>
+            <div class="black task-state"></div>
+            <button class="create-ticket">create</button>
+        </div>
+    </div>
+
+    <div class="ticket-cont">
+        <!-- <div class="ticket">
+            <div class="ticket-color"></div>
+            <div class="ticket-id"> </div>
+            <div class="ticket-desc"></div>
+        </div> -->
+
+       
+    </div>
+</body>
+<script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
+
+<script>
+    let addbtn=document.querySelector(".add-btn")
+    let task_creator=document.querySelector('.task-creator')
+    let task_state_colors = document.querySelectorAll(".task-state-list .task-state")
+    let createbtn=document.querySelector('.create-ticket')
+    let text_cont = document.querySelector('.text-cont')
+    let ticket_cont = document.querySelector('.ticket-cont')
+    let colors=["lightpink","lightgreen","lightblue","black"]
+  
+
+   
+    let task_creator_state = false
+    let ticket_color='light-pink'
+    
+    
+    addbtn.addEventListener('click',function(){
+        task_creator_state=!task_creator_state
+        if(task_creator_state){
+            task_creator.style.display ="none"
+        }else{
+            task_creator.style.display="flex"
+        }
+
+    })
+    for(let i=0;i<task_state_colors.length;i++){
+        task_state_colors[i].addEventListener('click',function(event){
+            console.log("I am clicked")
+            for(let i=0;i<task_state_colors.length;i++){
+                task_state_colors[i].classList.remove('active')
+            }
+            event.target.classList.add("active")
+            ticket_color=event.target.classList[0]
+            
+        })
+    }
+    createbtn.addEventListener('click',function(){
+        let id=shortid()
+        console.log("i am clicked")
+        console.log(ticket_color)
+        console.log(text_cont.value)
+        let ticket= create_ticket(ticket_color,text_cont.value,id) //function call
+
+        task_creator.style.display ="none"
+        task_creator_state=false
+
+        ticket_cont.append(ticket)
+        ticket_color='light-pink'
+       
+    })
+    function handle_color_state(ticket){
+        
+        //handle status of ticket
+        let ticket_colorstatus= ticket.querySelector(".ticket-color")
+        ticket_colorstatus.addEventListener('click',function(e){
+            let current_color= e.target.classList[1]
+            let index = colors.findIndex(function(color){
+
+                return current_color === color
+
+            })
+            index++
+            index = index% colors.length
+            let new_color = colors[index]
+            e.target.classList.remove(current_color)
+            e.target.classList.add(new_color)
+
+        })
+    }
+    function create_ticket(color,task_desc,id){
+        let ticket=document.createElement('div')
+        ticket.classList.add('ticket')
+
+        ticket.innerHTML=`
+            <div class="ticket-color ${color}"></div>
+            <div class="ticket-id">${id} </div>
+            <div class="ticket-desc">${task_desc}</div>
+
+            <i class="ticket-lock fa-solid fa-lock"></i>
+        `
+
+        handle_color_state(ticket)
+        return ticket
+    }
+
+
+
+    
+    
+</script>
+</html>

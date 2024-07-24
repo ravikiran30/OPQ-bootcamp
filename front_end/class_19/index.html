@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //handle multiple promises.
+        let p1= new Promise((resolve,reject) => {
+            resolve('Hello one')
+        })
+        let p2 = new Promise((resolve,reject) => {
+            setTimeout(()=>{
+                reject('Hello two')
+            },2000)
+        })
+        let resultPromise= Promise.all([p1,p2])
+        resultPromise.then((result) => {
+            console.log(result)
+
+        }).catch((err)=>{
+            console.log(err)
+        })
+
+
+
+
+    </script>
+    
+</body>
+</html>

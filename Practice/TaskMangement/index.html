@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        .task{
+            padding: 20px;
+            background-color: lightgray;
+            text-align: center;
+            font-size: 30px;
+        }
+        .input{
+            width: 60%;
+            font-size: 20px;
+        }
+        .priority{
+            width: 10%;
+            font-size: 20px;
+        }
+        .addbtn{
+            width: 10%;
+            font-size: 20px;
+            background-color: blue;
+            color: white;
+        }
+        .list{
+            display: block;
+            
+        }
+        .editbtn{
+            width: 10%;
+            font-size: 20px;
+            background-color: yellow;
+
+        }
+        .delbtn{
+            width: 10%;
+            font-size: 20px;
+            background-color: red;
+            color: white;
+        }
+        .popup1{
+            width: 40%;
+            height: 40%;
+            background-color: wheat;
+            padding: 30px;
+            text-align: center;
+            position:absolute;
+            left:50vh  
+                  
+        }
+        .popup1{
+            display: none
+        }
+        .active{
+            display: block
+        }
+       .edit-task ,.popup-priority{
+            width: 80%;
+            font-size: 30px;
+            
+        }
+        .cancelbtn,.savebtn{
+            width: 30%;
+            font-size: 20px;
+            
+        }
+        .footer{
+            margin-bottom: 0px;
+        }
+        .High{
+            background-color:red;
+            color: white;
+        }
+        .Medium{
+            background-color: yellow;
+        }
+        .Low{
+            background-color: green;
+            color: white;
+        }
+       
+       
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="task">
+            <h2 class="heading">Task</h2>
+            <input class="input" type="text" placeholder="Enter Text Here">
+            <select class="priority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button class="addbtn">Add Task</button>
+            <div class="list">
+                <input class=" input" type="text" >
+                <button class=" editbtn">Edit</button>
+                <button class=" delbtn">Delete</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="popup1">
+        <h2>Edit Task</h2>
+        <input type="text" class="edit-task">
+        <select class="popup-priority">
+            <option class="High pri" value="High">High</option>
+            <option class="Medium pri"value="Medium">Medium</option>
+            <option class="Low pri" value="Low">Low</option>
+        </select>
+        <div class="footer">
+
+
+            <button class="cancelbtn">Cancel</button>
+            <button class="savebtn">Save</button>
+
+        </div>
+
+    </div>
+    
+</body>
+<script>
+    let add_task_btn=document.querySelector(".addbtn")
+    let selection=document.querySelector('.priority')
+    let input_text=document.querySelector('.input')
+
+   
+    let edit_task_btn=document.querySelector(".list .editbtn")
+    add_task_btn.addEventListener('click',function(e){
+        let result=selection.options[selection.selectedIndex].text;
+        let given_text=input_text.value
+        let div_1= document.createElement('div')
+        
+        div_1.classList.add('list')
+        div_1.innerHTML=`
+                
+                <input class="input ${result}" type="text" value="${given_text}">
+                <button class=" editbtn">Edit</button>
+                <button class=" delbtn">Delete</button>
+               `
+        document.querySelector('.list').appendChild(div_1)
+        input_text.value=''
+        
+    })
+    edit_task_btn.addEventListener('click',function(e){
+        console.log("Hi")
+    })
+    
+     
+   
+    
+    
+       
+    
+           
+
+            
+  
+
+    
+
+
+
+</script>
+</html>

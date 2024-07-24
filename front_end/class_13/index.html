@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments_Section</title>
+    <style>
+        .comment{
+            background-color:rgb(222, 222, 222);
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            
+        }
+        .text{
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .reply{
+            color: blue;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .comment-reply-popup{
+            margin-left: 4rem;
+            margin-top: 10px;
+
+        }
+        .input{
+            height: 30px;
+            border-radius: 10px;
+
+        }
+        .submitbtn{
+            background-color:blueviolet;
+            border-radius: 10px;
+            height: 30px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .thread:not(:first-child){
+            margin-left: 4rem;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="comment-container">
+
+            <div class="thread">
+
+                <div class="comment">
+                    <span class="text">First Commentor</span>
+                    <span class="reply">Add Reply</span>
+                </div>
+
+            
+            <!-- <div class="comment-reply-popup">
+                <input type="text" placeholder="Write your reply">
+                <button class="submitbtn">Submit</button>
+            </div> -->
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let commentContainer = document.querySelector(".comment-container")
+
+    let thread= document.querySelector('.thread')
+    
+    commentContainer.addEventListener('click',function(e){
+        let isreplyBtnClicked = e.target.classList.contains('reply')
+        let isSubmitBtnClicked = e.target.classList.contains('submitbtn')
+        
+        let thread=e.target.closest('.thread')
+
+        if(isreplyBtnClicked === true){
+            let div = document.createElement('div')
+            div.setAttribute('class','comment-reply-popup')
+            div.innerHTML=`<input type="text" placeholder="Write your reply">
+                <button class="submitbtn">Submit</button>`
+            thread.appendChild(div)
+                
+        }
+
+        if(isSubmitBtnClicked === true){
+            let div = document.createElement('div')
+            let commentPopupClosest =e.target.closest(".comment-reply-popup")
+            let text = commentPopupClosest.children[0].value
+            div.setAttribute('class','thread')
+            div.innerHTML=`<div class="comment">
+                    <span class="text">${text}</span>
+                    <span class="reply">Add Reply</span>
+                </div>`
+            thread.appendChild(div)
+            commentPopupClosest.remove()
+
+
+        }
+    })
+      
+   
+
+
+
+</script>
+</html>
